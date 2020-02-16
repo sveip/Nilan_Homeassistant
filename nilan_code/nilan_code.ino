@@ -319,7 +319,7 @@ void writeResponse(WiFiClient &client, JsonObject &json)
 {
   client.println("HTTP/1.1 200 OK");
   // Check if anyting is set (means Nilan is connected)
-  if(json.containsKey("name"))
+  if(json.containsKey("group"))
   {
     client.println("Content-Type: application/json");
     client.println("Connection: close");
